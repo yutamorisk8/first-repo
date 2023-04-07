@@ -22,6 +22,7 @@
       <li><a href="#ul-el">UL要素</a></li>
       <li><a href="#ol-el">OL要素</a></li>
       <li><a href="#li-el">LI要素</a></li>
+      <li><a href="#dl,dt,dd-el">DL,DT,DD要素</a></li>
       <li><a href="#a-el">A要素</a></li>
     </ol>
 
@@ -97,16 +98,46 @@
       </code>
     </pre>
 
-    <h3 id="a-el">A要素</h3>
+    <h3 id="dl,dt,dd-el">DL、DT、DD要素</h3>
     <p>
-      S href 属性を用いて、別のウェブページ、ファイル、
-      メールアドレス、同一ページ内の場所、または他の URL
-      へのハイパーリンクを作成する。
+      説明リストを表します。この要素は、一連の用語(dt要素)と説明(dd要素)をリスト化したものです。一般的な仕様例として、用語集の表示が挙げられます。
     </p>
 
     <pre>
       <code>
-        &lt;a href=&quot;https://www.google.com&quot;&quot;target=&quot;_blank&quot;&gt;これはGoogleの検索ページへのリンクです。&lt;/a&gt;
+       &lt;dl&gt;
+          &lt;dt&gt;HTML&lt;/dt&gt;
+          &lt;dd&gt;Hyper Text Markup Language&lt;/dd&gt;
+          &lt;dt&gt;CSS&lt;/dt&gt;
+          &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+        &lt;/dl&gt;
+      </code>
+    </pre>
+
+    <h3 id="a-el">A要素</h3>
+    <p>
+      a要素は、href属性を用いて、ページ外リンクとページ内リンクの2つの使い方ができる。
+    </p>
+    <dl>
+      <dt>ページ外リンク</dt>
+      <dd>
+        href属性にWebサイトのページURLを指定することで、他のページへのリンクを表示する
+      </dd>
+      <dt>ページ内リンク</dt>
+      <dd>
+        href属性に#{ID}を指定することで、自ページの特定位置へ移動するリンクを表示する
+      </dd>
+    </dl>
+
+    <pre>
+      <code>
+      <!-- ページ外リンク-->
+      <a href="https://www.google.com""target="_blank">これはGoogleの検索ページへのリンクです。</a>
+
+        <!-- ページ内リンク -->
+       <a href="#section2">これはsection2へのページ内リンクです。</a> 
+       ...
+      <h2 id="section2">Section2</h2>
       </code>
     </pre>
 
